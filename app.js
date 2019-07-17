@@ -1,5 +1,6 @@
 let menuDiv = document.getElementById("menu")
 let showAllButton = document.getElementById("showAll")
+let startersButton = document.getElementById("starters")
 let entreeButton = document.getElementById("entrees")
 let dessertsButton = document.getElementById("desserts")
 
@@ -21,6 +22,28 @@ showAllButton.addEventListener('click', ()=> {
     menuDiv.innerHTML = menuListDiv.join('')
 },
 
+//Filters menu and shows starters only
+startersButton.addEventListener('click', () => {
+    menuDiv.innerHTML=''
+
+    let startersDishes = dishes.filter(dish => dish.course === 'Starters') 
+
+    let starterItems = startersDishes.map (dish => {
+
+        let menuItemDiv = `<div class='entreeItems'>
+                                <h4>${dish.title}</h4>
+                                <p>${dish.description}<p>
+                                <span>${dish.price}</p>
+                                <img src='${dish.imageURL}'></img>
+                            </div>`
+    
+    return menuItemDiv
+    
+    
+    })
+    menuDiv.insertAdjacentHTML('beforeend',starterItems.join(''))
+    
+}),
 
 //Filters menu and shows entrees only
 entreeButton.addEventListener('click', () => {

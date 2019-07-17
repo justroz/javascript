@@ -46,3 +46,11 @@ body {
     margin-top: 50px;
     display: grid;
 }
+
+#completedTasks div {
+    background-color: dodgerblue;
+    margin: 5px;
+    color: white;
+    font-size: 1em;
+    width: 200px;
+}

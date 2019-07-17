@@ -2,9 +2,9 @@
 let addButton = document.getElementById("addBtn")
 let enteredTask = document.getElementById("task")
 let newTasksDiv = document.getElementById("pendingTasks")
+let completedTasksDiv = document.getElementById("completedTasks")
 
 addButton.addEventListener('click', function() {
-    console.log("button clicked")
 
 let task = enteredTask.value 
 
@@ -19,7 +19,6 @@ taskSpan.innerHTML = task
 let chk = document.createElement("input")
 chk.setAttribute('type', 'checkbox')
 
-
 //create span to hold "Remove"
 let rmBtn = document.createElement("span")
 rmBtn.innerHTML = `<button onclick="removeTask(this)">Remove</button>`
@@ -32,9 +31,22 @@ taskDiv.appendChild(rmBtn)
 //adds each tash to pending tasks div
 newTasksDiv.appendChild(taskDiv)
 
+//initialize listener for checkbox
+chk.addEventListener('click', function () {
+    if (this.checked == true)
+        completedTasksDiv.appendChild(taskDiv)
+
+    else if (this.checked == false)
+        newTasksDiv.appendChild(taskDiv)        
 })
 
+
+})
+
+// removes tasks if remove button is pressed
 function removeTask(e) {
     e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode)
 }
+
+
 

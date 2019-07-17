@@ -25,6 +25,12 @@ h1 {
     text-align: center;
 }
 
+.menuItem {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, auto); 
+}
+
 #menu img {
     border: 2px solid whitesmoke;
 }
