@@ -19,7 +19,7 @@ menuDiv.innerHTML = menuListDiv.join('')
 //Shows all menu items when checked
 showAllButton.addEventListener('click', ()=> {
     menuDiv.innerHTML = menuListDiv.join('')
-}
+},
 
 
 //Filters menu and shows entrees only
@@ -43,7 +43,7 @@ entreeButton.addEventListener('click', () => {
     })
     menuDiv.insertAdjacentHTML('beforeend',entreeItems.join(''))
     
-})
+}),
 
 
 //Filters menu and shows desserts only
@@ -67,4 +67,4 @@ dessertsButton.addEventListener('click', () => {
     })
     menuDiv.insertAdjacentHTML('beforeend',dessertItems.join(''))
     
-})
+}))
