@@ -1,0 +1,48 @@
+body {
+    background-color: lightgray;
+}
+#taskEnter {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+
+}
+
+#taskEnter span {
+    color:dodgerblue;
+}
+
+#taskEnter textarea {
+    border: 2px solid dodgerblue;
+}
+
+#taskEnter button {
+    background-color: dodgerblue;
+    color: white;
+}
+
+#pendingTasks {
+    margin-left: 100px;
+    margin-top: 50px;
+    display: grid;
+}
+
+#pendingTasks div {
+    background-color: dodgerblue;
+    margin: 5px;
+    color: white;
+    font-size: 1em;
+    width: 200px;
+}
+
+#pendingTasks span {
+    margin: 10px;
+}
+
+#completedTasks {
+    margin-left: 100px;
+    margin-top: 50px;
+    display: grid;
+}
