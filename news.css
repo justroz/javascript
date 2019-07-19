@@ -1,0 +1,30 @@
+
+#container {
+    background-color: dodgerblue;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#theNews {
+    display: flex;
+    flex-direction: column;
+}
+
+.singleStory {
+    text-align: center;
+}
+
+.singleStory h4{
+    color: white;  
+}
+
+
+.singleStory img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid white;
+}
+
