@@ -1,0 +1,13 @@
+#container {
+    margin-left: 200px;
+    padding-top: 50px;
+}
+
+#timeDisplay {
+    background-color: crimson;
+    width: 600px;
+    height: 300px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 250px;
+}
