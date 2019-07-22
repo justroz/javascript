@@ -1,0 +1,20 @@
+#container {
+    display: flex;
+}
+
+
+#movieList {
+    margin-left: 50px;
+}
+
+#movieInfo {
+    width: 400px;
+    height: 375px;
+    background-color: crimson;
+    color: white;
+    margin-top: 60px;
+    margin-left: 400px;
+    padding: 10px;
+    position: fixed; 
+}
+
