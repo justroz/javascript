@@ -1,0 +1,25 @@
+body {
+    background-color: darkcyan;
+}
+
+#userInput {
+    text-align: center;
+}
+ #storeSelectionMenu, #addressSelectionMenu, #storeSelectionButton {
+    background-color: white;
+    color: black;
+}
+
+#deleteButton {
+    background-color: crimson;
+}
+
+#storeListing {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}

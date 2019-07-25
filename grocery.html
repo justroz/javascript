@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="grocery.css">
+
+</head>
+
+<body>
+
+<div id="container">
+
+   
+
+    <h1>Get Your Groceries</h1>
+
+        <div id="userInput">
+            
+            <select id="storeSelectionMenu" class="menus">
+                <option value="Walmart">Walmart</option>
+                <option value="HEB">HEB</option>
+                <option value="Fiesta">Fiesta</option>
+                <option value="Sams Club">Sams Club</option>
+            </select>
+
+            <select id="addressSelectionMenu" class="menus">
+                <option value="Richmond">12000 Richmond Ave</option>
+                <option value="Westpark">3500 Westpark Drive</option>
+                <option value="King">19130 MLK Way</option>
+                <option value="Clubhouse">7500 Clubhouse Road</option>
+            </select>
+
+            <button id="storeSelectButton">Select Store</button>
+
+            <hr>
+
+        </div>
+
+
+
+  
+
+    <div id="storeList">
+
+
+
+    </div>
+
+   
+
+
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDHKgjLjq2P3PNtuNfn1dpyK2CGG9-g37Y",
+    authDomain: "groceryapp-5ed9e.firebaseapp.com",
+    databaseURL: "https://groceryapp-5ed9e.firebaseio.com",
+    projectId: "groceryapp-5ed9e",
+    storageBucket: "",
+    messagingSenderId: "160968285879",
+    appId: "1:160968285879:web:f03caf99483f259c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database() 
+
+</script>
+
+
+
+
+
+
+
+<script src="grocery.js"></script>
+
+</body>
+
+</html>

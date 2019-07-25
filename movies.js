@@ -13,8 +13,7 @@ function showDetails(imdbID) {
 
         let movieItem = JSON.parse(event.currentTarget.responseText)
 
-            movieInfo.innerHTML =  `
-                                    <h4>Year: ${movieItem.Year}</h4>
+            movieInfo.innerHTML =  `<h4>Year: ${movieItem.Year}</h4>
                                     <h4>Rating: ${movieItem.Rated}</h4>
                                     <h4>Release: ${movieItem.Released}</h4>
                                     <h4>Director: ${movieItem.Director}</h4>
