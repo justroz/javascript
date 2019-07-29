@@ -2,6 +2,16 @@ body {
     background-color: darkcyan;
 }
 
+#registrationInfo {
+    text-align: center;
+}
+
+#returningUser {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #userInput {
     text-align: center;
 }

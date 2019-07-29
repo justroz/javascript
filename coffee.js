@@ -1,5 +1,4 @@
 let ordersURL = "http://dc-coffeerun.herokuapp.com/api/coffeeorders/"
-let placeOrderURL = "http://dc-coffeerun.herokuapp.com/api/coffeeorders/"
 let coffeeList = document.getElementById("coffeeList")
 let emailSpace = document.getElementById("emailSpace")
 let orderSpace = document.getElementById("orderSpace")
@@ -23,18 +22,35 @@ async function fetchOrders() {
 }
 
 
+submitButton.addEventListener('click', () => {
 
-function placeOrder() {
+    let emailAddress = emailSpace.value
+    let coffee = orderSpace.value
+    placeOrder(emailAddress, coffee)
 
-    submitButton.addEventListener('click', () => {
+})
 
-        let emailAddress = emailSpace.value
-        let coffee = orderSpace.value
+//function to actually place the order
+function placeOrder(emailAddress, coffee) {
 
-        console.log(emailAddress, coffee)
+    fetch(ordersURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          emailAddress: emailAddress,
+          coffee: coffee
+        }).then(console.log("order placed"))
+        
     })
 
 }
+
+
+
+
+
 
 
 

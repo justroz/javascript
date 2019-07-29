@@ -10,16 +10,16 @@ storeSelectButton.addEventListener('click', () => {
 
         let store = storeMenu.value
         let address = addressMenu.value
-        saveStore(store,address)
+        createShopper(store,address)
 })
 
-//add user input to database
-function saveStore(store, address) {
-    storesRef.push({
-        store: store,
-        address: address
-    })
+//add user input to database, create new shopper
+function createShopper (store, address) {
+    let shopper = new Shopper(store, address)
+    storesRef.push(shopper)
+
 }
+
 
 //creates the observation for any type of change
 storesRef.on('value',(snapshot) => {
@@ -30,27 +30,44 @@ storesRef.on('value',(snapshot) => {
         let store = snapshot.val()[key]
         store.key = key
         stores.push(store)
-        console.log(stores)
     }
 
     displayStores(stores)
 })
 
-
 //displays stores on screen
 function displayStores(stores) {
+
     let storeList = stores.map(store => {
         return `<div id="storeListing">
                 <h3>${store.store}</h3>
                 <h4>${store.address}</h4>
                 <div><button id="deleteButton" onclick='deleteStore("${store.key}")'>Delete</button></div>
+                <input type="text" placeholder="Enter Item" id="groceryItem">
+                <div><button id="addButton" onclick='addItemToList("${store.key}")'>Add Item</button></div>
                 </div>`
     })
 
+    
+
     storeListings.innerHTML = storeList.join('')
+    
 }
 
 //function to delete store
 function deleteStore(key) {
     storesRef.child(key).remove()
 }
+
+//create grocery list
+function addItemToList (storeKey) {
+    let groceryItem = document.getElementById("groceryItem")
+    let item = groceryItem.value
+
+    activeStore = storesRef.child(storeKey)
+
+    console.log(activeStore)
+    
+}
+
+
